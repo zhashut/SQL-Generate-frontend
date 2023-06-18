@@ -19,7 +19,7 @@ export default defineConfig({
     // 更多配置 https://github.com/Microsoft/monaco-editor-webpack-plugin#options
     memo.plugin('monaco-editor-webpack-plugin').use(MonacoEditorWebpackPlugin, [
       // 按需配置
-      { languages: ['sql', 'json', 'java', 'typescript'] },
+      { languages: ['sql', 'json', 'java', 'go'] },
     ]);
     return memo;
   },

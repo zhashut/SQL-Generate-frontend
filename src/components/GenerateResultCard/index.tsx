@@ -184,7 +184,37 @@ const GenerateResultCard: React.FC<Props> = (props) => {
             </>
           ),
         },
-        {
+          {
+              label: `Go 代码`,
+              key: 'goCode',
+              children: (
+                  <>
+                      <Collapse defaultActiveKey={['1', '2']}>
+                          <Collapse.Panel
+                              header="Go 结构体"
+                              key="1"
+                              className="code-collapse-panel"
+                              extra={
+                                  <Button
+                                      size="small"
+                                      icon={<CopyOutlined />}
+                                      onClick={(e) => {
+                                          copy(result.goStructCode);
+                                          e.stopPropagation();
+                                          message.success('已复制到剪切板');
+                                      }}
+                                  >
+                                      复制
+                                  </Button>
+                              }
+                          >
+                              <CodeEditor value={result.goStructCode} language="go" />
+                          </Collapse.Panel>
+                      </Collapse>
+                  </>
+              ),
+          },
+          {
           label: `Java 代码`,
           key: 'javaCode',
           children: (
@@ -209,59 +239,6 @@ const GenerateResultCard: React.FC<Props> = (props) => {
                   }
                 >
                   <CodeEditor value={result.javaEntityCode} language="java" />
-                </Collapse.Panel>
-                <Collapse.Panel
-                  header="对象代码"
-                  key="2"
-                  className="code-collapse-panel"
-                  extra={
-                    <Button
-                      size="small"
-                      icon={<CopyOutlined />}
-                      onClick={(e) => {
-                        copy(result?.javaObjectCode);
-                        e.stopPropagation();
-                        message.success('已复制到剪切板');
-                      }}
-                    >
-                      复制
-                    </Button>
-                  }
-                >
-                  <CodeEditor value={result.javaObjectCode} language="java" />
-                </Collapse.Panel>
-              </Collapse>
-            </>
-          ),
-        },
-        {
-          label: `前端代码`,
-          key: 'frontendCode',
-          children: (
-            <>
-              <Collapse defaultActiveKey={['1']}>
-                <Collapse.Panel
-                  header="Typescript 类型代码"
-                  key="1"
-                  className="code-collapse-panel"
-                  extra={
-                    <Button
-                      size="small"
-                      icon={<CopyOutlined />}
-                      onClick={(e) => {
-                        copy(result?.typescriptTypeCode);
-                        e.stopPropagation();
-                        message.success('已复制到剪切板');
-                      }}
-                    >
-                      复制
-                    </Button>
-                  }
-                >
-                  <CodeEditor
-                    value={result.typescriptTypeCode}
-                    language="typescript"
-                  />
                 </Collapse.Panel>
               </Collapse>
             </>
