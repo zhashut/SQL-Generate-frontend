@@ -18,9 +18,9 @@
 
 
 
-前端代码仓库：[https://github.com/liyupi/sql-father-frontend-public](https://github.com/liyupi/sql-father-frontend-public)
+前端代码仓库：[https://github.com/zhashut/sql-father-frontend-public](https://github.com/zhashut/sql-father-frontend-public)
 
-后端代码仓库：[https://github.com/liyupi/sql-father-backend-public](https://github.com/liyupi/sql-father-backend-public)
+后端代码仓库：[https://github.com/zhashut/sql-father-backend-public](https://github.com/zhashut/sql-father-backend-public)
 
 ![](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1/1666090763987-f768817c-89d6-4326-b7e1-5ad06d5cc875-20221019132239543-20221019132502106-20221019132511275.png)
 

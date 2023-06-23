@@ -11,7 +11,7 @@ interface Props {
 /**
  * 代码编辑器
  * @constructor
- * @author https://github.com/liyupi
+ * @author https://github.com/zhashut
  */
 const CodeEditor: React.FC<Props> = (props) => {
   const { value, height = 480, language = 'sql', onChange } = props;

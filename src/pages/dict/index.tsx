@@ -9,7 +9,7 @@ import './index.less';
  * 主页
  *
  * @constructor
- * @author https://github.com/liyupi
+ * @author https://github.com/zhashut
  */
 const IndexPage: React.FC = () => {
   const [layout, setLayout] = useState('half');

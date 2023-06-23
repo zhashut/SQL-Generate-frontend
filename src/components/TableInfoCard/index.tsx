@@ -24,7 +24,7 @@ interface Props {
  * 表信息卡片
  *
  * @constructor
- * @author https://github.com/liyupi
+ * @author https://github.com/zhashut
  */
 const TableInfoCard: React.FC<Props> = (props) => {
   const { title = '表信息列表', needLogin = false, showTag = true, onLoad, onImport } = props;

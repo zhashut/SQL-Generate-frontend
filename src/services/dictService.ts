@@ -116,7 +116,7 @@ export async function deleteDict(params: DeleteRequest) {
  * 生成创建字典表 SQL
  * @param id
  */
-export async function generateCreateDictTableSql(id: number) {
+export async function generateCreateDictTableSql(id: string) {
   return request<BaseResponse<GenerateVO>>(`/dict/generate/sql`, {
     method: 'POST',
     headers: {

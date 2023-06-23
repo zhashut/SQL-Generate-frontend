@@ -11,7 +11,7 @@ import './index.less';
 /**
  * 全局 Footer
  *
- * @author https://github.com/liyupi
+ * @author https://github.com/zhashut
  */
 const GlobalFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();

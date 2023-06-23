@@ -29,7 +29,7 @@ interface Props {
  * 词库列表
  *
  * @constructor
- * @author https://github.com/liyupi
+ * @author https://github.com/zhashut
  */
 const DictList: React.FC<Props> = (props) => {
   const { dataList, pagination, loading, showTag = true } = props;
@@ -104,7 +104,7 @@ const DictList: React.FC<Props> = (props) => {
                 loading={genLoading}
                 onClick={() => {
                   setGenLoading(true);
-                  generateCreateDictTableSql(item.id)
+                  generateCreateDictTableSql(String(item.id))
                     .then((res) => {
                       setResult(res.data);
                     })

@@ -7,6 +7,10 @@ import SqlInputModal from '@/components/SqlInputModal';
 import { generateBySchema, getSchemaByExcel } from '@/services/sqlService';
 import { getTableInfoById } from '@/services/tableInfoService';
 import { PageContainer } from '@ant-design/pro-components';
+import React, { useEffect, useRef, useState } from 'react';
+import { useSearchParams } from 'umi';
+import './index.less';
+import ExcelInputModal from "@/components/ExcelInputModal";
 import {
   BackTop,
   Button,
@@ -21,21 +25,20 @@ import {
   Upload,
   UploadProps,
 } from 'antd';
-import React, { useEffect, useRef, useState } from 'react';
-import { useSearchParams } from 'umi';
-import './index.less';
+
 
 /**
  * 主页
  *
  * @constructor
- * @author https://github.com/liyupi
+ * @author https://github.com/zhashut
  */
 const IndexPage: React.FC = () => {
   const [result, setResult] = useState<GenerateVO>();
   const [autoInputModalVisible, setAutoInputModalVisible] = useState(false);
   const [jsonInputModalVisible, setJsonInputModalVisible] = useState(false);
   const [sqlInputModalVisible, setSqlInputModalVisible] = useState(false);
+  const [excelInputModalVisible, setExcelInputModalVisible] = useState(false);
   const [importTableDrawerVisible, setImportTableDrawerVisible] =
     useState(false);
   const [genLoading, setGenLoading] = useState(false);
@@ -70,6 +73,7 @@ const IndexPage: React.FC = () => {
     setAutoInputModalVisible(false);
     setJsonInputModalVisible(false);
     setSqlInputModalVisible(false);
+    setExcelInputModalVisible(false);
     message.success('导入成功');
   };
 
@@ -145,6 +149,9 @@ const IndexPage: React.FC = () => {
         <Upload {...uploadProps}>
           <Button>导入 Excel</Button>
         </Upload>
+        <Button onClick={() => setExcelInputModalVisible(true)}>
+          导入 Excel (Test)
+        </Button>
       </Space>
       <div style={{ marginTop: 16 }} />
       <FormInput ref={formInputRef} onSubmit={doGenerateBySchema} />
@@ -202,6 +209,11 @@ const IndexPage: React.FC = () => {
         onSubmit={importTableSchema}
         visible={sqlInputModalVisible}
         onClose={() => setSqlInputModalVisible(false)}
+      />
+      <ExcelInputModal
+        onSubmit={importTableSchema}
+        visible={excelInputModalVisible}
+        onClose={() => setExcelInputModalVisible(false)}
       />
       <ImportTableDrawer
         onImport={(tableInfo) => {

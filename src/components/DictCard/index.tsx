@@ -24,7 +24,7 @@ interface Props {
  * 词库卡片
  *
  * @constructor
- * @author https://github.com/liyupi
+ * @author https://github.com/zhashut
  */
 const DictCard: React.FC<Props> = (props) => {
   const { title = '公开词库', needLogin = false, showTag = true, onLoad, onImport } = props;

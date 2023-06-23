@@ -14,7 +14,7 @@ interface Props {
  * 导入字段抽屉
  *
  * @constructor
- * @author https://github.com/liyupi
+ * @author https://github.com/zhashut
  */
 const ImportFieldDrawer: React.FC<Props> = (props) => {
   const { visible, onImport, onClose } = props;

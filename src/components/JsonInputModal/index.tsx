@@ -13,7 +13,7 @@ interface Props {
  * JSON 配置输入模态框
  *
  * @constructor
- * @author https://github.com/liyupi
+ * @author https://github.com/zhashut
  */
 const JsonInput: React.FC<Props> = (props) => {
   const { visible, onSubmit, onClose } = props;

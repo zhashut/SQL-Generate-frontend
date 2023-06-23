@@ -10,7 +10,7 @@ import './index.less';
  * 表信息页
  *
  * @constructor
- * @author https://github.com/liyupi
+ * @author https://github.com/zhashut
  */
 const TableInfoPage: React.FC = () => {
   const [layout, setLayout] = useState('half');

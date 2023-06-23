@@ -14,7 +14,7 @@ interface Props {
  * 智能导入输入模态框
  *
  * @constructor
- * @author https://github.com/liyupi
+ * @author https://github.com/zhashut
  */
 const AutoInputModal: React.FC<Props> = (props) => {
   const { visible, onSubmit, onClose } = props;
