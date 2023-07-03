@@ -79,7 +79,7 @@ const FormInput: React.FC<Props> = forwardRef((props, ref) => {
         setDictList(res.data);
       })
       .catch((e) => {
-        message.error('加载词库失败，' + e.message);
+        // message.error('加载词库失败');
       });
   };
 

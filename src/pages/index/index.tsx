@@ -149,9 +149,6 @@ const IndexPage: React.FC = () => {
         <Upload {...uploadProps}>
           <Button>导入 Excel</Button>
         </Upload>
-        <Button onClick={() => setExcelInputModalVisible(true)}>
-          导入 Excel (Test)
-        </Button>
       </Space>
       <div style={{ marginTop: 16 }} />
       <FormInput ref={formInputRef} onSubmit={doGenerateBySchema} />

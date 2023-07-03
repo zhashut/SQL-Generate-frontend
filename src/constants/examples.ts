@@ -80,7 +80,7 @@ export const JSON_INPUT_EXAMPLE = {
  */
 export const SQL_INPUT_EXAMPLE =
     '-- 用户表\n' +
-    'create table if not exists yupi_db.user\n' +
+    'create table if not exists user\n' +
     '(\n' +
     "id bigint not null auto_increment comment '主键' primary key,\n" +
     "username varchar(256) not null comment '用户名',\n" +
