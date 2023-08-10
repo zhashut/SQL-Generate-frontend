@@ -107,7 +107,7 @@
 安装依赖：
 
 ```bash
-npm run install
+npm install
 ```
 
 运行：
