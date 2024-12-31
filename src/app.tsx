@@ -50,7 +50,7 @@ const isDev = process.env.NODE_ENV === 'development';
  * https://umijs.org/docs/max/request
  */
 export const request: RequestConfig = {
-  baseURL: isDev ? 'http://localhost:8102/api' : 'https://sql.zhashut.icu/api',
+  baseURL: isDev ? 'http://localhost:8102/api' : 'https://zhashut.top/api',
   timeout: 10000,
   withCredentials: true,
   // other axios options you want

@@ -51,6 +51,15 @@ const GlobalFooter: React.FC = () => {
           href: 'https://support.qq.com/product/596724',
           blankTarget: true,
         },
+        {
+          title: (
+            <>
+                <a>粤ICP备2024356243号-1</a>
+            </>
+          ),
+          href: 'https://beian.miit.gov.cn/#/Integrated/recordQuery',
+          blankTarget: true,
+        },
       ]}
     />
   );
